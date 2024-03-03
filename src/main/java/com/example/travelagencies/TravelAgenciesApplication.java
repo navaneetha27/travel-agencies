@@ -20,10 +20,10 @@ public class TravelAgenciesApplication  {
 		PassengerInterface standardPassenger = new StandardPassenger("standard",2,3000);
 		for(TravelAgency agency  : travelAgencySystem.getTravelAgencyList().values()){
 			System.out.println("Agency Name:" + agency.getAgencyName()  + "Packages");
-//			agency.showPackages();
+			agency.showPackages();
 			agency.showPackagesWithEnrolledDetails();
 		}
-		sampleRegistration(travelAgencySystem,goldPassenger);
+//		sampleRegistration(travelAgencySystem,goldPassenger);
 		Set<PassengerInterface> passengerSet = new HashSet<>();
 		for (TravelAgency agency: travelAgencySystem.getTravelAgencyList().values()){
 			passengerSet.addAll(agency.getAllPassegers());
